@@ -15,6 +15,8 @@ namespace _01_AbstractClass
                  results.Add(rnd.Next(1, 21));
             }
 
+            Console.WriteLine("Your d20 roll(s):");
+
             foreach (var item in results)
             {
                 Console.WriteLine(item);

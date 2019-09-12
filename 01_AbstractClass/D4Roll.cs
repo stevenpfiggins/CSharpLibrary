@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Linq;
 
 namespace _01_AbstractClass
 {
-    public class D6Roll : DiceRoll
+    public class D4Roll : DiceRoll
     {
         public override void RollDice(int num)
         {
@@ -13,10 +12,10 @@ namespace _01_AbstractClass
             var rnd = new Random();
             for (int i = 0; i < num; i++)
             {
-                results.Add(rnd.Next(1, 7));
+                results.Add(rnd.Next(1, 5));
             }
 
-            Console.WriteLine("Your d6 roll(s):");
+            Console.WriteLine("Your d4 roll(s):");
 
             foreach (var item in results)
             {
