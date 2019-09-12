@@ -33,8 +33,7 @@ namespace _01_AbstractClass
                         DiceRoll d4 = new D4Roll();
                         while (subMenuRunning)
                         {
-                            Console.Clear();
-                            Console.WriteLine("How many dice would you like to roll?");
+                            SubMenuIntro();
                             var success = int.TryParse(Console.ReadLine(), out numDice);
                             if (success)
                             {
@@ -43,8 +42,7 @@ namespace _01_AbstractClass
                             }
                             else
                             {
-                                Console.WriteLine("That is not a valid input. Please try again");
-                                Console.ReadLine();
+                                NotANumberErrorHandling();
                             }
 
                         }
@@ -56,8 +54,7 @@ namespace _01_AbstractClass
                         DiceRoll d6 = new D6Roll();
                         while (subMenuRunning)
                         {
-                            Console.Clear();
-                            Console.WriteLine("How many dice would you like to roll?");
+                            SubMenuIntro();
                             var success = int.TryParse(Console.ReadLine(), out numDice);
                             if (success)
                             {
@@ -66,8 +63,7 @@ namespace _01_AbstractClass
                             }
                             else
                             {
-                                Console.WriteLine("That is not a valid input. Please try again");
-                                Console.ReadLine();
+                                NotANumberErrorHandling();
                             }
 
                         }
@@ -79,8 +75,7 @@ namespace _01_AbstractClass
                         DiceRoll d8 = new D8Roll();
                         while (subMenuRunning)
                         {
-                            Console.Clear();
-                            Console.WriteLine("How many dice would you like to roll?");
+                            SubMenuIntro();
                             var success = int.TryParse(Console.ReadLine(), out numDice);
                             if (success)
                             {
@@ -89,8 +84,7 @@ namespace _01_AbstractClass
                             }
                             else
                             {
-                                Console.WriteLine("That is not a valid input. Please try again");
-                                Console.ReadLine();
+                                NotANumberErrorHandling();
                             }
 
                         }
@@ -102,8 +96,7 @@ namespace _01_AbstractClass
                         DiceRoll d10 = new D10Roll();
                         while (subMenuRunning)
                         {
-                            Console.Clear();
-                            Console.WriteLine("How many dice would you like to roll?");
+                            SubMenuIntro();
                             var success = int.TryParse(Console.ReadLine(), out numDice);
                             if (success)
                             {
@@ -112,8 +105,7 @@ namespace _01_AbstractClass
                             }
                             else
                             {
-                                Console.WriteLine("That is not a valid input. Please try again");
-                                Console.ReadLine();
+                                NotANumberErrorHandling();
                             }
 
                         }
@@ -125,8 +117,7 @@ namespace _01_AbstractClass
                         DiceRoll d12 = new D12Roll();
                         while (subMenuRunning)
                         {
-                            Console.Clear();
-                            Console.WriteLine("How many dice would you like to roll?");
+                            SubMenuIntro();
                             var success = int.TryParse(Console.ReadLine(), out numDice);
                             if (success)
                             {
@@ -135,8 +126,7 @@ namespace _01_AbstractClass
                             }
                             else
                             {
-                                Console.WriteLine("That is not a valid input. Please try again");
-                                Console.ReadLine();
+                                NotANumberErrorHandling();
                             }
 
                         }
@@ -148,8 +138,7 @@ namespace _01_AbstractClass
                         DiceRoll d20 = new D20Roll();
                         while (subMenuRunning)
                         {
-                            Console.Clear();
-                            Console.WriteLine("How many dice would you like to roll?");
+                            SubMenuIntro();
                             var success = int.TryParse(Console.ReadLine(), out numDice);
                             if (success)
                             {
@@ -158,8 +147,7 @@ namespace _01_AbstractClass
                             }
                             else
                             {
-                                Console.WriteLine("That is not a valid input. Please try again");
-                                Console.ReadLine();
+                                NotANumberErrorHandling();
                             }
 
                         }
@@ -171,8 +159,7 @@ namespace _01_AbstractClass
                         DiceRoll d100 = new D100Roll();
                         while (subMenuRunning)
                         {
-                            Console.Clear();
-                            Console.WriteLine("How many dice would you like to roll?");
+                            SubMenuIntro();
                             var success = int.TryParse(Console.ReadLine(), out numDice);
                             if (success)
                             {
@@ -181,8 +168,7 @@ namespace _01_AbstractClass
                             }
                             else
                             {
-                                Console.WriteLine("That is not a valid input. Please try again");
-                                Console.ReadLine();
+                                NotANumberErrorHandling();
                             }
 
                         }
@@ -199,6 +185,18 @@ namespace _01_AbstractClass
                         break;
                 }
             }
+        }
+
+        public static void NotANumberErrorHandling()
+        {
+            Console.WriteLine("That is not a valid input. Please try again");
+            Console.ReadLine();
+        }
+
+        public static void SubMenuIntro()
+        {
+            Console.Clear();
+            Console.WriteLine("How many dice would you like to roll?");
         }
     }
 }
