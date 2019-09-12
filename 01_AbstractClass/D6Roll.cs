@@ -20,7 +20,7 @@ namespace _01_AbstractClass
 
             foreach (var item in results)
             {
-                Console.WriteLine(item);
+                Console.WriteLine("\t" + item);
             }
         }
     }

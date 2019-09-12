@@ -12,6 +12,7 @@ namespace _01_AbstractClass
 
             while (isRunning)
             {
+                bool subMenuRunning = true;
                 Console.Clear();
                 Console.WriteLine("Welcome to Dice Roller! Please choose a number:\n" +
                     "\t1. Roll d4\n" +
@@ -27,61 +28,166 @@ namespace _01_AbstractClass
 
                 switch (response)
                 {
-                    case "1":
+                    case "1":;
                         Console.Clear();
                         DiceRoll d4 = new D4Roll();
-                        Console.WriteLine("How many dice would you like to roll?");
-                        numDice = int.Parse(Console.ReadLine());
-                        d4.RollDice(numDice);
+                        while (subMenuRunning)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("How many dice would you like to roll?");
+                            var success = int.TryParse(Console.ReadLine(), out numDice);
+                            if (success)
+                            {
+                                d4.RollDice(numDice);
+                                subMenuRunning = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("That is not a valid input. Please try again");
+                                Console.ReadLine();
+                            }
+
+                        }
                         Console.ReadLine();
+                        subMenuRunning = false;
                         break;
                     case "2":
                         Console.Clear();
                         DiceRoll d6 = new D6Roll();
-                        Console.WriteLine("How many dice would you like to roll?");
-                        numDice = int.Parse(Console.ReadLine());
-                        d6.RollDice(numDice);
+                        while (subMenuRunning)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("How many dice would you like to roll?");
+                            var success = int.TryParse(Console.ReadLine(), out numDice);
+                            if (success)
+                            {
+                                d6.RollDice(numDice);
+                                subMenuRunning = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("That is not a valid input. Please try again");
+                                Console.ReadLine();
+                            }
+
+                        }
                         Console.ReadLine();
+                        subMenuRunning = false;
                         break;
                     case "3":
                         Console.Clear();
                         DiceRoll d8 = new D8Roll();
-                        Console.WriteLine("How many dice would you like to roll?");
-                        numDice = int.Parse(Console.ReadLine());
-                        d8.RollDice(numDice);
+                        while (subMenuRunning)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("How many dice would you like to roll?");
+                            var success = int.TryParse(Console.ReadLine(), out numDice);
+                            if (success)
+                            {
+                                d8.RollDice(numDice);
+                                subMenuRunning = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("That is not a valid input. Please try again");
+                                Console.ReadLine();
+                            }
+
+                        }
                         Console.ReadLine();
+                        subMenuRunning = false;
                         break;
                     case "4":
                         Console.Clear();
                         DiceRoll d10 = new D10Roll();
-                        Console.WriteLine("How many dice would you like to roll?");
-                        numDice = int.Parse(Console.ReadLine());
-                        d10.RollDice(numDice);
+                        while (subMenuRunning)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("How many dice would you like to roll?");
+                            var success = int.TryParse(Console.ReadLine(), out numDice);
+                            if (success)
+                            {
+                                d10.RollDice(numDice);
+                                subMenuRunning = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("That is not a valid input. Please try again");
+                                Console.ReadLine();
+                            }
+
+                        }
                         Console.ReadLine();
+                        subMenuRunning = false;
                         break;
                     case "5":
                         Console.Clear();
                         DiceRoll d12 = new D12Roll();
-                        Console.WriteLine("How many dice would you like to roll?");
-                        numDice = int.Parse(Console.ReadLine());
-                        d12.RollDice(numDice);
+                        while (subMenuRunning)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("How many dice would you like to roll?");
+                            var success = int.TryParse(Console.ReadLine(), out numDice);
+                            if (success)
+                            {
+                                d12.RollDice(numDice);
+                                subMenuRunning = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("That is not a valid input. Please try again");
+                                Console.ReadLine();
+                            }
+
+                        }
                         Console.ReadLine();
+                        subMenuRunning = false;
                         break;
                     case "6":
                         Console.Clear();
                         DiceRoll d20 = new D20Roll();
-                        Console.WriteLine("How many dice would you like to roll?");
-                        numDice = int.Parse(Console.ReadLine());
-                        d20.RollDice(numDice);
+                        while (subMenuRunning)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("How many dice would you like to roll?");
+                            var success = int.TryParse(Console.ReadLine(), out numDice);
+                            if (success)
+                            {
+                                d20.RollDice(numDice);
+                                subMenuRunning = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("That is not a valid input. Please try again");
+                                Console.ReadLine();
+                            }
+
+                        }
                         Console.ReadLine();
+                        subMenuRunning = false;
                         break;
                     case "7":
                         Console.Clear();
                         DiceRoll d100 = new D100Roll();
-                        Console.WriteLine("How many dice would you like to roll?");
-                        numDice = int.Parse(Console.ReadLine());
-                        d100.RollDice(numDice);
+                        while (subMenuRunning)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("How many dice would you like to roll?");
+                            var success = int.TryParse(Console.ReadLine(), out numDice);
+                            if (success)
+                            {
+                                d100.RollDice(numDice);
+                                subMenuRunning = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("That is not a valid input. Please try again");
+                                Console.ReadLine();
+                            }
+
+                        }
                         Console.ReadLine();
+                        subMenuRunning = false;
                         break;
                     case "8":
                         isRunning = false;
@@ -89,6 +195,7 @@ namespace _01_AbstractClass
                     default:
                         Console.WriteLine($"{response} is not a valid input. Please try again.");
                         Console.Clear();
+                        subMenuRunning = false;
                         break;
                 }
             }
